@@ -21,10 +21,10 @@
                         <h2 id="totalPrice">Your total is:</h2>
                 </div>
                 <h3 id="tip"> Tip:
-                <button id="tip1">30%</button> <!-- get tip from customer -->
-                <button id="tip2">20%</button>
-                <button id="tip3">15%</button>
-              </h3>
+                        <button id="tip1">30%</button> <!-- get tip from customer -->
+                        <button id="tip2">20%</button>
+                        <button id="tip3">15%</button>
+                </h3>
         </div>
         <script>
                 var total = Number(localStorage.getItem("total")); //get total from previous page       
@@ -96,7 +96,7 @@
                         document.getElementById('container').style.visibility = "hidden";
                         document.getElementById('thankYou').innerHTML = "Thank You!";
                         window.alert("Total Cost : $ " + newTotal.toFixed(2));
-                        
+
                 }
                 //copy from tip3
                 tip2.onclick = function () { //calculate tip 20%
@@ -111,7 +111,7 @@
                         var newTotal = totalFinal * 1.30;
                         document.getElementById('container').style.visibility = "hidden";
                         document.getElementById('thankYou').innerHTML = "Thank You!";
-                       window.alert("Total Cost : $ " + newTotal.toFixed(
+                        window.alert("Total Cost : $ " + newTotal.toFixed(
                                 2));
                 }
         </script>

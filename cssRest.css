@@ -2,7 +2,7 @@
 .bottom {
     background-color: white;
     text-align: center;
-   
+
 }
 
 div {
@@ -37,16 +37,16 @@ div {
     margin: 0;
     font-size: 10vh;
     background-color: rgba(255, 255, 255, 0.233);
-   
+
     /* no px */
 
 }
 
 select {
-    width:20vw;
-    font-size:3vh;
-   display:block;
-   margin: 0 auto;
+    width: 20vw;
+    font-size: 3vh;
+    display: block;
+    margin: 0 auto;
 
 
 }
@@ -78,11 +78,11 @@ button {
     background-color: grey;
     margin-left: auto;
     margin-right: auto;
-    border-width:3px;
+    border-width: 3px;
     border-style: outset;
-    border-color:black;
-   
-  
+    border-color: black;
+
+
 }
 
 #total {
@@ -153,14 +153,17 @@ a {
     background-size: cover;
 
 }
-h2{
+
+h2 {
     background-color: rgba(255, 255, 255, 0.479);
 }
-#thankYou{
-    text-align:center;
+
+#thankYou {
+    text-align: center;
     font-size: 10vh;
 }
 
-#totalPrice, #tax{
+#totalPrice,
+#tax {
     text-align: center;
 }

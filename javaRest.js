@@ -2,11 +2,11 @@ var xmlhttp = new XMLHttpRequest(); //display json
 xmlhttp.onreadystatechange = function () { //i will do this when somthing is matched
     if (this.readyState == 4 && this.status == 200) { //4 = ready 200=okay 44=error
         var mydata = JSON.parse(this.responseText); //json will be saved as mydata
-    
+
         var foodName = []; //array for names
         var foodPrice = []; //array for prices
 
-        for(var i = 0; i < mydata.food.length; i++){
+        for (var i = 0; i < mydata.food.length; i++) {
             foodName.push(mydata.food[i].name);
             foodPrice.push(mydata.food[i].price);
         }
@@ -27,32 +27,33 @@ xmlhttp.onreadystatechange = function () { //i will do this when somthing is mat
             var itemList = (foodName[0] + " x " + qty + " = $" + foodPrice[0] * qty);
             localStorage.setItem("item1", itemList); //set order summary to next page
 
-}
-      order.onclick = function(){
-if (document.getElementById('user1').value >= 1){
-      enter();
-        
-}
-if (document.getElementById('user2').value >=1){
-    enter2();
-}
+        }
+        order.onclick = function () {
+            if (document.getElementById('user1').value >= 1) {
+                enter();
 
-if (document.getElementById('user3').value >=1){
-    enter3();
-}
-   
-if (document.getElementById('user4').value >=1){
-    enter4();
-}
-   
-if (document.getElementById('user5').value >=1){
-    enter5();
-}
-   
-if (document.getElementById('user6').value >=1){
-    enter6();
-}
-    }
+            }
+            if (document.getElementById('user2').value >= 1) {
+                enter2();
+            }
+
+            if (document.getElementById('user3').value >= 1) {
+                enter3();
+            }
+
+            if (document.getElementById('user4').value >= 1) {
+                enter4();
+            }
+
+            if (document.getElementById('user5').value >= 1) {
+                enter5();
+            }
+
+            if (document.getElementById('user6').value >= 1) {
+                enter6();
+            }
+        }
+
         function enter2() {
             var qty = document.getElementById('user2').value; //get quantity
             //display price at bottom with tax
@@ -69,7 +70,7 @@ if (document.getElementById('user6').value >=1){
             var itemList = (foodName[1] + " x " + qty + " = $" + foodPrice[1] * qty);
             localStorage.setItem("item2", itemList); //set order summary to next page
         }
-       
+
 
         function enter3() {
             var qty = document.getElementById('user3').value; //get quantity
@@ -87,7 +88,7 @@ if (document.getElementById('user6').value >=1){
             var itemList = (foodName[2] + " x " + qty + " = $" + foodPrice[2] * qty);
             localStorage.setItem("item3", itemList); //set order summary to next page
         }
-       
+
         //function 4
         function enter4() {
             var qty = document.getElementById('user4').value; //get quantity
@@ -106,7 +107,7 @@ if (document.getElementById('user6').value >=1){
             localStorage.setItem("item4", itemList); //set order summary to next page
 
         }
-       
+
         //function 5
         function enter5() {
             var qty = document.getElementById('user5').value; //get quantity
@@ -125,7 +126,7 @@ if (document.getElementById('user6').value >=1){
             localStorage.setItem("item5", itemList); //set order summary to next page
 
         }
-       
+
         //function6
         function enter6() {
             var qty = document.getElementById('user6').value; //get quantity
@@ -144,7 +145,7 @@ if (document.getElementById('user6').value >=1){
             localStorage.setItem("item6", itemList); //set order summary to next page
 
         }
-       
+
         //show name and price of items
         document.getElementById('mapo').innerHTML = foodName[0] + " - $" + foodPrice[0];
         document.getElementById('wonton').innerHTML = foodName[1] + " - $" + foodPrice[1];
@@ -165,19 +166,19 @@ if (document.getElementById('user6').value >=1){
             }
             if (password == "item3") {
                 left2.style.visibility = "hidden";
-            } 
+            }
 
             if (password == "item4") {
                 right2.style.visibility = "hidden";
             }
             if (password == "item5") {
                 left3.style.visibility = "hidden";
-            } 
+            }
             if (password == "item6") {
                 right3.style.visibility = "hidden";
             }
         }
-      
+
         title.onclick = function () { //enter password to make box appear again
             var password = prompt("Enter password");
             if (password == "item1") {
@@ -215,12 +216,13 @@ if (document.getElementById('user6').value >=1){
 xmlhttp.open("GET", "jsonRest.json", true);
 xmlhttp.send();
 
-document.getElementById('user1').value = 0;
-document.getElementById('user2').value = 0;
-document.getElementById('user3').value = 0;
-document.getElementById('user4').value = 0;
-document.getElementById('user5').value = 0;
-document.getElementById('user6').value = 0;
+document.getElementsByClassName("choose")[0].value = 0;
+document.getElementsByClassName("choose")[1].value = 0;
+document.getElementsByClassName("choose")[2].value = 0;
+document.getElementsByClassName("choose")[3].value = 0;
+document.getElementsByClassName("choose")[4].value = 0;
+document.getElementsByClassName("choose")[5].value = 0;
+
 
 localStorage.clear();
 
