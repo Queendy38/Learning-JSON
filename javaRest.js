@@ -222,7 +222,7 @@ document.getElementById('user4').value = 0;
 document.getElementById('user5').value = 0;
 document.getElementById('user6').value = 0;
 
-
+localStorage.clear();
 
 document.getElementById('pic1').style.visibility = "hidden"; //input box hidden
 document.getElementById('pic2').style.visibility = "hidden";
