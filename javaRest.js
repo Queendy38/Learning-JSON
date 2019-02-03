@@ -216,6 +216,7 @@ setInterval(function () { //auto refresh
         current = JSON.stringify(json);
         if (previous && current && previous !== current) {
             location.reload();
+            window.alert("hi");
         }
         previous = current;
     });
