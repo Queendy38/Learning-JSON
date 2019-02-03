@@ -14,7 +14,7 @@ xmlhttp.onreadystatechange = function () { //i will do this when somthing is mat
         function enter() {
             var qty = document.getElementById('user1').value; //get quantity
             //display price at bottom with tax
-            var totalP = (qty * 1.471) * foodPrice[0];
+            var totalP = (qty * 1.0471) * foodPrice[0];
             localStorage.setItem("total", totalP); //set item, price with tax
             var totalL2 = Number(localStorage.getItem("total2")); //get from box2
             var totalL3 = Number(localStorage.getItem("total3")); //get from box3
@@ -57,7 +57,7 @@ xmlhttp.onreadystatechange = function () { //i will do this when somthing is mat
         function enter2() {
             var qty = document.getElementById('user2').value; //get quantity
             //display price at bottom with tax
-            var totalP = (qty * 1.471) * foodPrice[1]; //get price
+            var totalP = (qty * 1.0471) * foodPrice[1]; //get price
             localStorage.setItem("total2", totalP); //set item
             var totalL = Number(localStorage.getItem("total")); //get price from box1
             var totalL3 = Number(localStorage.getItem("total3")); //get from box3
@@ -75,7 +75,7 @@ xmlhttp.onreadystatechange = function () { //i will do this when somthing is mat
         function enter3() {
             var qty = document.getElementById('user3').value; //get quantity
             //display price at bottom with tax
-            var totalP = (qty * 1.471) * foodPrice[2]; //get price
+            var totalP = (qty * 1.0471) * foodPrice[2]; //get price
             localStorage.setItem("total3", totalP); //set item
             var totalL = Number(localStorage.getItem("total")); //get from box1
             var totalL2 = Number(localStorage.getItem("total2")); //get from box 2
@@ -93,7 +93,7 @@ xmlhttp.onreadystatechange = function () { //i will do this when somthing is mat
         function enter4() {
             var qty = document.getElementById('user4').value; //get quantity
             //display price at bottom with tax
-            var totalP = (qty * 1.471) * foodPrice[3]; //get price
+            var totalP = (qty * 1.0471) * foodPrice[3]; //get price
             localStorage.setItem("total4", totalP); //set item
             var totalL = Number(localStorage.getItem("total")); //get from box1
             var totalL2 = Number(localStorage.getItem("total2")); //get from box 2
@@ -112,7 +112,7 @@ xmlhttp.onreadystatechange = function () { //i will do this when somthing is mat
         function enter5() {
             var qty = document.getElementById('user5').value; //get quantity
             //display price at bottom with tax
-            var totalP = (qty * 1.471) * foodPrice[4]; //get price
+            var totalP = (qty * 1.0471) * foodPrice[4]; //get price
             localStorage.setItem("total5", totalP); //set item
             var totalL = Number(localStorage.getItem("total")); //get from box1
             var totalL2 = Number(localStorage.getItem("total2")); //get from box 2
@@ -131,7 +131,7 @@ xmlhttp.onreadystatechange = function () { //i will do this when somthing is mat
         function enter6() {
             var qty = document.getElementById('user6').value; //get quantity
             //display price at bottom with tax
-            var totalP = (qty * 1.471) * foodPrice[5]; //get price
+            var totalP = (qty * 1.0471) * foodPrice[5]; //get price
             localStorage.setItem("total6", totalP); //set item
             var totalL = Number(localStorage.getItem("total")); //get from box1
             var totalL2 = Number(localStorage.getItem("total2")); //get from box 2

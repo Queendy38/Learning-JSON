@@ -34,7 +34,7 @@
                 var total5 = Number(localStorage.getItem("total5"));
                 var total6 = Number(localStorage.getItem("total6"));
                 var totalFinal = total + total2 + total3 + total4 + total5 + total6;
-                var tax = totalFinal / 1.471;
+                var tax = totalFinal / 1.0471;
                 var ul = document.getElementById('list');
 
                 var li = document.createElement('li'); //create list
@@ -89,7 +89,7 @@
                 }
 
                 document.getElementById('totalPrice').innerHTML = "Total Cost : $ " + totalFinal.toFixed(2); //display total cost
-                document.getElementById('tax').innerHTML = "Your tax is: $" + (tax * 0.471).toFixed(2); //get tax
+                document.getElementById('tax').innerHTML = "Your tax is: $" + (tax * 0.0471).toFixed(2); //get tax
 
                 tip3.onclick = function () { //calculate tip 15%
                         var newTotal = totalFinal * 1.15;
