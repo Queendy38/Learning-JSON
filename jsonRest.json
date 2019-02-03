@@ -1,7 +1,7 @@
 {
     "food": [{
             "name": "Mapo Tofu",
-            "price": 14,
+            "price": 12,
             "description": "Spicy, Salty, Soft tofu"
         },
         {
@@ -13,7 +13,7 @@
         },
         {
             "name": "Fried Rice",
-            "price": 17,
+            "price": 9,
             "description": "Peas, Carrots, Eggs, Spam, Hot Sauce"
 
         },
@@ -29,7 +29,7 @@
         },
         {
             "name": "Pho",
-            "price": 18,
+            "price": 14,
             "description": "Beef Broth, Thin Noodles"
         }
 
