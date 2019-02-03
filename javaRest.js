@@ -290,6 +290,6 @@ setInterval(function () { //auto refresh
         if (previous && current && previous !== current) {
             location.reload();
         }
-       // previous = current;
+       previous = current;
     });
 }, 2000);
