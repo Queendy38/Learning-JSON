@@ -207,13 +207,6 @@ xmlhttp.onreadystatechange = function () { //i will do this when somthing is mat
         //try to make sold out sign
 
 
-
-
-    }
-
-};
-xmlhttp.open("GET", "jsonRest.json", true);
-xmlhttp.send();
 document.getElementsByClassName("choose")[0].value = 0;
 document.getElementsByClassName("choose")[1].value = 0;
 document.getElementsByClassName("choose")[2].value = 0;
@@ -279,6 +272,13 @@ right3.onmouseout = function () { //if onmouseout, make input hidden
 function checkout() { //jump to next page
     location.href = "Rest2.html";
 }
+
+
+    }
+
+};
+xmlhttp.open("GET", "jsonRest.json", true);
+xmlhttp.send();
 
 
 
