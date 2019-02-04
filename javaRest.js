@@ -282,14 +282,14 @@ right3.onmouseout = function () { //if onmouseout, make input hidden
 function checkout() { //jump to next page
     location.href = "Rest2.html";
 }
+
 var previous = null;
 var current = null;
-setInterval(function () { //auto refresh
-    $.getJSON("jsonRest.json", function (json) {
-        current = JSON.stringify(json);
-        if (previous && current && previous !== current) {
-            location.reload();
-        }
-       previous = current;
-    });
+setInterval(function () {
+  $.getJSON("Food.json", function (json) {
+    current = JSON.stringify(json);
+    if (previous && current && previous !== current) {
+      location.reload();
+    }
+  });
 }, 2000);
