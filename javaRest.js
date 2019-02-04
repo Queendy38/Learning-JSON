@@ -204,15 +204,6 @@ xmlhttp.onreadystatechange = function () { //i will do this when somthing is mat
             }
 
         }
-        //try to make sold out sign
-
-
-document.getElementsByClassName("choose")[0].value = 0;
-document.getElementsByClassName("choose")[1].value = 0;
-document.getElementsByClassName("choose")[2].value = 0;
-document.getElementsByClassName("choose")[3].value = 0;
-document.getElementsByClassName("choose")[4].value = 0;
-document.getElementsByClassName("choose")[5].value = 0;
 
 
 localStorage.clear();
@@ -269,7 +260,7 @@ right3.onmouseout = function () { //if onmouseout, make input hidden
     document.getElementById('pic6').style.visibility = "hidden";
 }
 
-function checkOut() { //jump to next page
+checkOut.onclick = function() { //jump to next page
     location.href = "Rest2.html";
 }
 
