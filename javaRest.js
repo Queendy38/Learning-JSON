@@ -1,12 +1,11 @@
+      var foodName = []; //array for names
+      var foodPrice = []; //array for prices
 var xmlhttp = new XMLHttpRequest(); //display json
 xmlhttp.onreadystatechange = function () { //i will do this when somthing is matched
     if (this.readyState == 4 && this.status == 200) { //4 = ready 200=okay 44=error
         var mydata = JSON.parse(this.responseText); //json will be saved as mydata
 
-        var foodName = []; //array for names
-        var foodPrice = []; //array for prices
-
-        for (var i = 0; i < mydata.food.length; i++) {
+   for (var i = 0; i < mydata.food.length; i++) {
             foodName.push(mydata.food[i].name);
             foodPrice.push(mydata.food[i].price);
         }
