@@ -285,7 +285,7 @@ xmlhttp.send();
 var previous = null;
 var current = null;
 setInterval(function () {
-  $.getJSON("Food.json", function (json) {
+  $.getJSON("jsonRest.json", function (json) {
     current = JSON.stringify(json);
     if (previous && current && previous !== current) {
       location.reload();
