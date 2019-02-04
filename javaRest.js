@@ -271,7 +271,7 @@ checkOut.onclick = function() { //jump to next page
 xmlhttp.open("GET", "jsonRest.json", true);
 xmlhttp.send();
 
-
+//check reload
 
 var previous = null;
 var current = null;
