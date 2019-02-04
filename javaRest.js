@@ -269,7 +269,7 @@ right3.onmouseout = function () { //if onmouseout, make input hidden
     document.getElementById('pic6').style.visibility = "hidden";
 }
 
-function checkout() { //jump to next page
+function checkOut() { //jump to next page
     location.href = "Rest2.html";
 }
 
