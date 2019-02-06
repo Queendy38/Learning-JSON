@@ -51,6 +51,9 @@ xmlhttp.onreadystatechange = function () { //i will do this when somthing is mat
             if (document.getElementById('user6').value >= 1) {
                 enter6();
             }
+            else{
+                window.alert("Please order something");
+            }
         }
 
         function enter2() {

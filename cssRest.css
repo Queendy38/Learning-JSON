@@ -2,6 +2,7 @@
 .bottom {
     background-color: white;
     text-align: center;
+    font-size:10vh;
 
 }
 
@@ -11,6 +12,12 @@ div {
     margin: 0.75px;
 
 
+}
+#order{
+    display:block;
+    margin:auto;
+    font-size:10vh;
+    
 }
 
 #left1,
@@ -52,14 +59,17 @@ select {
 }
 
 button {
-    float: right;
+   
     border-width: 0;
     background-color: rgba(255, 0, 0, 0);
     font-size: 3vh;
     font-family: 'Times New Roman', Times, serif;
+    border-width:2px;  
 }
+#checkOut{
 
-
+float: right;
+}
 #bottom {
     width: 100%;
     background-color: white;
@@ -127,6 +137,7 @@ a {
     text-decoration-line: none;
     color: black;
     font-size: 3vh;
+    border-width:5px;  
 
 }
 
