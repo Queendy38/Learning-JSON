@@ -93,6 +93,8 @@
                 document.getElementById('tax').innerHTML = "Your tax is: $" + (tax * 0.0471).toFixed(2); //get tax
 
                 tip3.onclick = function () { //calculate tip 15%
+                         //forces the web to start from top
+                        window.scrollTo(0, 0);
                         var newTotal = totalFinal * 1.15;
                         document.getElementById('container').style.visibility = "hidden";
                         document.getElementById('thankYou').innerHTML = "Thank You!";
@@ -101,6 +103,8 @@
                 }
                 //copy from tip3
                 tip2.onclick = function () { //calculate tip 20%
+                          //forces the web to start from top
+                          window.scrollTo(0, 0);
                         var newTotal = totalFinal * 1.20;
                         document.getElementById('container').style.visibility = "hidden";
                         document.getElementById('thankYou').innerHTML = "Thank You!";
@@ -109,6 +113,8 @@
                 }
                 //copy from tip3
                 tip1.onclick = function () { //calculate tip 30%
+                          //forces the web to start from top
+                          window.scrollTo(0, 0);
                         var newTotal = totalFinal * 1.30;
                         document.getElementById('container').style.visibility = "hidden";
                         document.getElementById('thankYou').innerHTML = "Thank You!";
