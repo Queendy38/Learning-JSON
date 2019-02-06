@@ -208,58 +208,6 @@ xmlhttp.onreadystatechange = function () { //i will do this when somthing is mat
 
 localStorage.clear();
 
-document.getElementById('pic1').style.visibility = "hidden"; //input box hidden
-document.getElementById('pic2').style.visibility = "hidden";
-document.getElementById('pic3').style.visibility = "hidden";
-document.getElementById('pic4').style.visibility = "hidden";
-document.getElementById('pic5').style.visibility = "hidden";
-document.getElementById('pic6').style.visibility = "hidden";
-
-
-left1.onmouseover = function () { //if mouseover, display input
-    document.getElementById('pic1').style.visibility = "visible";
-}
-left1.onmouseout = function () { //if ,mouseout, hides the input
-    document.getElementById('pic1').style.visibility = "hidden";
-}
-
-
-right1.onmouseover = function () { //if mouseover, make imput visible
-    document.getElementById('pic2').style.visibility = "visible";
-}
-right1.onmouseout = function () { //if mouseout, make input hidden
-    document.getElementById('pic2').style.visibility = "hidden";
-}
-
-
-left2.onmouseover = function () { //if mouseover, make input visible
-    document.getElementById('pic3').style.visibility = "visible";
-}
-left2.onmouseout = function () { //if onmouseout, make input hidden
-    document.getElementById('pic3').style.visibility = "hidden";
-}
-
-right2.onmouseover = function () { //if mouseover, make input visible
-    document.getElementById('pic4').style.visibility = "visible";
-}
-right2.onmouseout = function () { //if onmouseout, make input hidden
-    document.getElementById('pic4').style.visibility = "hidden";
-}
-
-left3.onmouseover = function () { //if mouseover, make input visible
-    document.getElementById('pic5').style.visibility = "visible";
-}
-left3.onmouseout = function () { //if onmouseout, make input hidden
-    document.getElementById('pic5').style.visibility = "hidden";
-}
-
-right3.onmouseover = function () { //if mouseover, make input visible
-    document.getElementById('pic6').style.visibility = "visible";
-}
-right3.onmouseout = function () { //if onmouseout, make input hidden
-    document.getElementById('pic6').style.visibility = "hidden";
-}
-
 checkOut.onclick = function() { //jump to next page
     location.href = "Rest2.html";
 }
