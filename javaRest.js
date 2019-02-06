@@ -1,6 +1,10 @@
       var foodName = []; //array for names
       var foodPrice = []; //array for prices
       var testing = false; //asks the user to order
+
+      window.onbeforeunload = function () { //forces the web to start from top
+        window.scrollTo(0, 0);
+      }
 var xmlhttp = new XMLHttpRequest(); //display json
 xmlhttp.onreadystatechange = function () { //i will do this when somthing is matched
     if (this.readyState == 4 && this.status == 200) { //4 = ready 200=okay 44=error
