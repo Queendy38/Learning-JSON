@@ -1,5 +1,6 @@
       var foodName = []; //array for names
       var foodPrice = []; //array for prices
+      var testing = false; //asks the user to order
 var xmlhttp = new XMLHttpRequest(); //display json
 xmlhttp.onreadystatechange = function () { //i will do this when somthing is matched
     if (this.readyState == 4 && this.status == 200) { //4 = ready 200=okay 44=error
@@ -27,33 +28,40 @@ xmlhttp.onreadystatechange = function () { //i will do this when somthing is mat
             localStorage.setItem("item1", itemList); //set order summary to next page
 
         }
+    
         order.onclick = function () {
             if (document.getElementById('user1').value >= 1) {
                 enter();
+                testing = true;
 
             }
             if (document.getElementById('user2').value >= 1) {
                 enter2();
+                testing = true;
             }
 
             if (document.getElementById('user3').value >= 1) {
                 enter3();
+                testing = true;
             }
 
             if (document.getElementById('user4').value >= 1) {
                 enter4();
+                testing = true;
             }
 
             if (document.getElementById('user5').value >= 1) {
                 enter5();
+                testing = true;
             }
 
             if (document.getElementById('user6').value >= 1) {
                 enter6();
+                testing = true;
             }
-            else{
-                window.alert("Please order something");
-            }
+          else if (testing == false) {
+              window.alert("Please order something.")
+          }
         }
 
         function enter2() {
