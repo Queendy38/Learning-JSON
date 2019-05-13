@@ -1,0 +1,16 @@
+body {
+  overflow:hidden;
+    padding: 0;
+    margin: 0;  
+  background-image:url("https://spacenews.com/wp-content/uploads/2018/05/24359364107_152b0152ff_k-879x485.jpg");
+  background-size:cover;
+  }
+ #restart {
+    display:block;
+    margin:0 auto;
+    border-style:none;
+    background-color:rgba(255, 255, 0, 0);
+    color:white;
+    text-decoration: underline;
+    position:relative;
+  }

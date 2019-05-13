@@ -1,0 +1,51 @@
+
+<html>
+<head>
+        <link rel="stylesheet" href="cssStyle.css">
+   <style>
+      
+p, h1, h2{
+    color:white;
+    font-size:5vh;
+}
+#prompt{
+    width:50vw;
+    height:50vh;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+ 
+}
+#title{
+    text-decoration: underline;
+}
+#start{
+    border-width: 1px;
+    border-style:solid;
+}
+
+
+
+   </style>
+</head>
+<body>
+   <div id="prompt">
+       <h1 id="title">Instructions</h1>
+        <h2 id="objective">Kill All Your Enemies</h2>
+       <p>Spacebar =>  jump</p>
+       <p>Enter => attack</p>
+       <p>Left-arrow => move left</p>
+       <p>Right-arrow => move right</p>
+       <p id="start">Press Enter to play</p>
+   </div> 
+   <script>
+      
+    window.onkeypress = function(){
+        if (event.keyCode == 13){
+          location.href = "main.html"; //link to main.html
+        }
+    }
+    //save highest score
+   </script>
+</body>
+</html>

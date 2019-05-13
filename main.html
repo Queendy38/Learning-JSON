@@ -1,0 +1,174 @@
+<html>
+
+<head>
+  <script src="p5.min.js"></script>
+  <script src="p5.collide2D-master/p5.collide2d.min.js"></script>
+  <script src="p5.sound.min.js"></script>
+  <script src="jumper.js"></script>
+  <script src="barrier.js"></script>
+  <script src="platform.js"></script>
+  <script src="tool.js"></script>
+  <link rel="stylesheet" href="cssStyle.css">
+  
+
+  <style>
+   h1 {
+      position: relative;
+      color: white;
+    position:fixed;
+    }
+   
+    #gameover{
+      font-size: 100px;
+      color: red;
+      text-align:center;
+      margin:0;
+      transform:translateX(30vw);
+     position:fixed;
+      
+    }
+  
+
+  </style>
+</head>
+
+<body>
+  <h1 id="score">  </h1>
+  <p id="gameover">Game Over!
+   </p>
+    <button id="restart">Restart</button>
+   
+ 
+  <script>
+    var w = window.innerWidth;
+    var h = window.innerHeight;
+    var hit;
+    var hit2;
+    var hit3;
+    var character;
+    var characterLeft;
+    var enemy;
+    var restBlock;
+    var background;
+    var jumper = new jumper();
+    var barrier = new barrier();
+    var barrierW = 100;
+    var barrierH = 61;
+  var score = 0;
+    var platform = new platform();
+    var song;
+    var gameOver;
+    var jumpSound;
+    var hitSound;
+    var jumperW = 27;
+    var jumperH = 57;
+    var attack = new attack();
+    var touch = false;
+    var left = false;
+    var right = false;
+  
+
+    document.getElementById('restart').style.visibility = "hidden";
+    document.getElementById('gameover').style.visibility = "hidden";
+    restart.onclick = function () {
+      location.reload();
+     
+    }
+    
+    function preload(){
+      soundFormats('mp3');
+      song = loadSound('Undertale - Spider Dance (Remix).mp3');
+      jumpSound = loadSound('Mario_Jumping-Mike_Koenig-989896458.mp3');
+      hitSound = loadSound("Pain-SoundBible.com-1883168362.mp3");
+      gameOver = loadSound('Icy Game Over.mp3');
+      
+    }
+    function setup() {
+      createCanvas(w, h);
+      gameOver.play();
+      gameOver.setVolume(0);
+      gameOver.loop();
+      jumpSound.setVolume(0.5);
+      
+      song.setVolume(0.1);
+      song.play();
+     song.loop();
+      character = loadImage("Layer 0.png");
+      characterLeft = loadImage("Layer 2.png");
+      enemy = loadImage("Layer 1.png");
+      restBlock = loadImage("game-platform-ice-designs-elements-450w-512516827.jpg");
+      
+        
+     
+    }
+
+    function draw() { 
+  
+    background("rgba(255,0,0,0)"); //makes canvas transparent
+      clear(); //erase trace mark
+      document.getElementById('score').innerHTML = "Your Score: " + score;
+      jumper.show();
+      jumper.update();
+      barrier.show();
+      barrier.update();
+      platform.show();
+      attack.show();
+   
+    
+     
+      //when jumper hits barriers, stop loop
+      hit = collideRectRect(barrier.x, barrier.y, barrierW, barrierH, jumper.x, jumper.y, jumperW, jumperH); //parameter of rect and circle
+      if ((hit) || (score <0)){
+  
+        document.getElementById('restart').style.visibility = "visible";
+        document.getElementById('gameover').style.visibility = "visible";
+        hitSound.play();
+        song.setVolume(0); //stop background
+        gameOver.setVolume(1);
+        window.alert("Oh no, the aliens attacked the earth");
+        noloop();
+        
+        
+
+      }
+      //when jumper hits green box, rest
+      hit2 = collideRectRect(platform.x, platform.y, 50, 51, jumper.x, jumper.y, jumperW, jumperH);
+      if (hit2) {
+        //when hits green box, jumps higher and stay
+        jumper.velocity += -6;
+        attack.velocity += -6;
+        //cant stay at platform for too long
+       platform.move = random(-2,20);
+        platform.x += platform.move;
+    
+      
+      }
+      //when jumper attack enemy
+      hit3 = collideLineRect(attack.x, attack.y + 30, w, attack.y + 30, barrier.x, barrier.y, barrierW, barrierH );
+      if ((hit3) && (touch== true)){
+        score += 100; //add score
+        barrier.x = w; //start again
+        barrier.gravity += 0.5;//= up if hit enemy
+        barrier.y = random(h);// random position
+       
+            }
+  
+    }
+
+    
+    window.onclick = function(){
+      touch = true;
+      jumper.up();
+      attack.up();
+      
+    }
+  
+
+  
+ //minus point if hit 0
+ //make gound
+  </script>
+
+</body>
+
+</html>
